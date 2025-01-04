@@ -1,0 +1,29 @@
+{
+  "name": "zustand-indexeddb-storage",
+  "version": "1.0.0",
+  "description": "`Zustand Indexed DB Storage` is a utility library designed to enhance the state management capabilities of Zustand by persisting state in IndexedDB. This package enables seamless storage and retrieval of state across sessions and browser tabs using IndexedDB as a storage medium. It is particularly useful for maintaining user preferences, session information, and other critical state that should persist even after the user closes or refreshes the browser.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanotexnolagiya/zustand-indexeddb-storage.git"
+  },
+  "keywords": [
+    "zustand",
+    "cookie",
+    "storage",
+    "persist"
+  ],
+  "author": "Islomkhuja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanotexnolagiya/zustand-indexeddb-storage/issues"
+  },
+  "homepage": "https://github.com/nanotexnolagiya/zustand-indexeddb-storage#readme",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
