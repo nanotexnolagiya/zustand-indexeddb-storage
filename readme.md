@@ -1,10 +1,10 @@
-# zustand-cookie-storage
+# zustand-indexeddb-storage
 
 [![NPM Version](https://img.shields.io/npm/v/zustand-indexeddb-storage.svg)](https://www.npmjs.com/package/zustand-indexeddb-storage)
 [![License](https://img.shields.io/npm/l/zustand-indexeddb-storage.svg)](https://www.npmjs.com/package/zustand-indexeddb-storage)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/zustand-indexeddb-storage/ci.yml)](https://github.com/nanotexnolagiya/zustand-cookie-storage/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/zustand-indexeddb-storage/ci.yml)](https://github.com/nanotexnolagiya/zustand-indexeddb-storage/actions)
 
-`zustand-indexeddb-storage` is a plugin for [Zustand](https://github.com/pmndrs/zustand) that allows you to persist your store's state in cookies. This package makes it easy to maintain state across sessions and browser tabs.
+`zustand-indexeddb-storage` is a plugin for [Zustand](https://github.com/pmndrs/zustand) that allows you to persist your store's state in IndexedDB. This package makes it easy to maintain state across sessions and browser tabs.
 
 ## Features
 
@@ -25,7 +25,7 @@ yarn add zustand-indexeddb-storage
 ```javascript
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { cookieStorage } from "zustand-indexeddb-storage";
+import { indexedDBStorage } from "zustand-indexeddb-storage";
 
 const useMainStore = create(
   persist(
@@ -35,7 +35,7 @@ const useMainStore = create(
     }),
     {
       name: "main",
-      storage: createJSONStorage(() => cookieStorage),
+      storage: createJSONStorage(() => indexedDBStorage),
       partialize(state) {
         return {
           basketIds: state.basketIds

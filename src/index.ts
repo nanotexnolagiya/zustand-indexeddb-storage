@@ -8,7 +8,7 @@ interface StateStorage {
 
 type CustomObject = Record<string, any>;
 
-export const cookieStorage: StateStorage = {
+export const indexedDBStorage: StateStorage = {
   getItem: async (key) => {
     const stores = (await indexedDBInstance.getStoreNames()).filter((store) =>
       store.startsWith(key)

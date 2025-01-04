@@ -13,7 +13,7 @@
   },
   "keywords": [
     "zustand",
-    "cookie",
+    "indexedDB",
     "storage",
     "persist"
   ],
